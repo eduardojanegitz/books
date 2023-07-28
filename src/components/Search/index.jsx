@@ -1,13 +1,14 @@
 import React from "react";
 import Input from "../Input";
+import { Section, Subtitle, Title } from "./Search";
 
 const Search = () => {
   return (
-    <section>
-      <h2>Já sabe por onde começar?</h2>
-      <h3>Encontre o seu livro em nossa estante.</h3>
+    <Section>
+      <Title>Já sabe por onde começar?</Title>
+      <Subtitle>Encontre o seu livro em nossa estante.</Subtitle>
       <Input placeholder="Escreva sua próxima leitura" />
-    </section>
+    </Section>
   );
 };
 
