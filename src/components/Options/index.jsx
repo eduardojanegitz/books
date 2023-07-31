@@ -9,9 +9,9 @@ const options = ["CATEGORIAS", "FAVORITOS", "MINHA ESTANTE"];
 const Options = () => {
   return (
     <OptionsContainer>
-      {options.map((option) => (
+      {options.map((option, index) => (
         <Option>
-          <Paragraph>{option}</Paragraph>
+          <Paragraph key={index}>{option}</Paragraph>
         </Option>
       ))}
       <Icons>
