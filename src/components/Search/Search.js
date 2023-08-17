@@ -22,12 +22,6 @@ export const Subtitle = styled.h3 `
   margin-bottom: 40px;
 `;
 
-export const Result = styled.div `
-display: inline-block;
-padding-right: 10px;
-
-`
-
 export const Image = styled.img `
   display: flex;
 `

@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../Input";
-import { Section, Subtitle, Title, Result } from "./Search";
+import { Section, Subtitle, Title } from "./Search";
 import { books } from "./data";
 import { useState } from "react";
 
@@ -11,27 +11,24 @@ const Search = () => {
 
   return (
     <>
-    
-    <Section>
-      <Title>Já sabe por onde começar?</Title>
-      <Subtitle>Encontre o seu livro em nossa estante.</Subtitle>
-      <Input
-        placeholder="Escreva sua próxima leitura"
-        onBlur={(event) => {
-          const text = event.target.value;
-          const result = books.filter((book) => book.nome.includes(text));
-          setSearchBooks(result);
-        }}
-      />
-    </Section>
+      <Section>
+        <Title>Já sabe por onde começar?</Title>
+        <Subtitle>Encontre o seu livro em nossa estante.</Subtitle>
+        <Input
+          placeholder="Escreva sua próxima leitura"
+          onBlur={(event) => {
+            const text = event.target.value;
+            const result = books.filter((book) => book.nome.includes(text));
+            setSearchBooks(result);
+          }}
+        />
       {searchBooks.map((book) => (
         <>
-        <Result>
           <p>{book.nome}</p>
           <img src={book.src} />
-        </Result>
         </>
       ))}
+      </Section>
     </>
   );
 };
